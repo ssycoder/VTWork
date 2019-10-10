@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="javaapplication3.Employee" table="employee">
+  
+  
+  <id column="id" name="id" type="int">
+  <generator class="native">
+  </generator></id>
+  <property name="firstName">
+  <column name="first_name">
+  </column></property>
+   <property name="lastName">
+  <column name="last_name">
+  </column></property>
+  <property name="salary">
+  <column name="salary">
+  </column></property>
+  </class>
+  
+</hibernate-mapping>
