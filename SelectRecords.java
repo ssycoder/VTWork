@@ -75,48 +75,25 @@ public class SelectRecords {
          se.printStackTrace();
       }//end finally try
    }//end try
-   //***********************
-   
-    
-  
-    
+   //***********************    
  
-  Logger logger = Logger.getLogger(SelectRecords.class.getName());
-  
+  Logger logger = Logger.getLogger(SelectRecords.class.getName()); 
  
-  try {
+  try { 
  
- 
-// Create an instance of FileHandler with 5 logging files sequences.
- 
- 
-FileHandler handler = new FileHandler("sample.log", FILE_SIZE, 5, true);
- 
- 
-handler.setFormatter(new SimpleFormatter());
- 
- 
-logger.addHandler(handler);
- 
- 
-logger.setUseParentHandlers(false);
- 
+      // Create an instance of FileHandler with 5 logging files sequences.
+      FileHandler handler = new FileHandler("sample.log", FILE_SIZE, 5, true);
+      handler.setFormatter(new SimpleFormatter());
+      logger.addHandler(handler);
+      logger.setUseParentHandlers(false); 
   } catch (IOException e) {
- 
- 
-logger.warning("Failed to initialize logger handler.");
- 
-  }
+        logger.warning("Failed to initialize logger handler.");
+   }
   
  
   logger.info("Logging info message.");
- 
-  logger.warning("Logging warn message.");
-  
-  logger.info("Data sucesssfully written to data.");
-  
- 
-    
+  logger.warning("Logging warn message.");  
+  logger.info("Data sucesssfully written to data.");    
    
    //**********************
    System.out.println("Goodbye!");
